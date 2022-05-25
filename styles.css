@@ -1,9 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
-
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css");
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+  
 }
 
 html {
@@ -47,6 +46,9 @@ body {
 .footer {
   grid-area: footer;
   background-color: #8c96a0;
+  
+  display: grid;
+  place-items: center;
 }
 
 .grid-container {
@@ -89,3 +91,76 @@ body {
   }
 }
 
+.iframe.container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe.container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+  background-color: #151515;
+}
+
+
+.social-icons {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block;
+  margin: 0.15em;
+  position: relative;
+  font-size: 1.2em;
+}
+
+.social-icons i {
+  color: #fff;
+  position: absolute;
+  top: 21px;
+  left: 21px;
+  transition: all 265ms ease-out;
+}
+
+.social-icons a {
+  display: inline-block;
+}
+
+.social-icons a::before {
+  transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  content: " ";
+  width: 60px;
+  height: 60px;
+  border-radius: 100%;
+  display: block;
+  background: linear-gradient(43deg, #85aedd 0%, #afd6af 46%, #fdcfcf 100%);
+  transition: all 265ms ease-out;
+}
+
+.social-icons a:hover::before {
+  transform: scale(0);
+  transition: all 265ms ease-in;
+}
+
+.social-icons a:hover i {
+  transform: scale(2);
+  -ms-transform: scale(2);
+  -webkit-transform: scale(2);
+  color: #fff;
+  background: linear-gradient(43deg, #4158D0 0%, #85AEDD 46%, #FFCC70 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 265ms ease-in;
+}
